@@ -1,7 +1,7 @@
 <img src="{{ site.baseurl }}/assets/images/logo.png" style="max-width:600px; max-height:600px;">
 <nav class="headerlinks">
     {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" style="border-color:{{ item.color }}; {% if page.url == item.link %}background-color:{{ item.color }}; color: #191919;{% endif %}">
+    <a href="{{ site.baseurl }}{{ item.link }}" style="border-color:{{ item.color }}; {% if page.url == item.link %}background-color:{{ item.color }}; color: #191919;{% endif %}">
             {{ item.name }}
         </a>
     {% endfor %}
