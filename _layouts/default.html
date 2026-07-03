@@ -16,6 +16,7 @@
                 --color: {% for item in site.data.navigation %}{% if page.url == item.link %} {{ item.color }} {% endif %} {% endfor %};
             }
             html {
+                background-image: url("{{ site.baseurl }}/assets/images/bg-tile.png");
                 color: var(--color);
             }
             .content {
