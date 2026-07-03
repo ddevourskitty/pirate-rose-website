@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <style>
+            :root {
+                --color: white;
+            }
+            :root {
+                --color: {% for item in site.data.navigation %}{% if page.url == item.link %} {{ item.color }} {% endif %} {% endfor %};
+            }
+            html {
+                color: var(--color);
+            }
+            .content {
+                border-color: var(--color);
+            }
+            #happenings {
+                border-color: var(--color);
+            }
+            .announcements {
+                border-color: var(--color);
+            }
+        </style>
+    </head>
+
+    <body>
+        {% include header.html %}
+        <div class="content">
+            {{ content }}
+            {% include content-footer.html %}
+        </div>
+    </body>
+    {% include footer.html %}
+</html>

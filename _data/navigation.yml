@@ -1,0 +1,12 @@
+- name: look!
+  link: /
+  color: "#00F500"
+- name: us
+  link: /us.html
+  color: "#FFE200"
+- name: you
+  link: /you.html
+  color: "#B900F2"
+- name: more
+  link: /more.html
+  color: "#FF00A6"
